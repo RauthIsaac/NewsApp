@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS Files/interests.css">
+        <title>Interests</title>
+
+        <style>
+            #page {
+                background-color: rgb(233, 231, 234);
+                justify-content: center;
+                align-items: center;
+                margin: 100px 300px ;
+                padding: 15px;
+            } 
+        </style>
+
+    </head>
+    <body>
+        <div id ="page">
+
+            <div style= "text-align: center" >
+                <label for="interest" style=" padding: 20px;" >Interest</label>
+                <input type="text" name="interest" id="interest" placeholder="interest" style="border-radius: 5px ;border: none; margin: 5px 0; padding: 5px; background-color:white; width: 200px; height: 30px;" required>
+                <input type="button" name ="Add" id="Add" value="Add" onclick="addInterest()" style="border-radius: 5px ;border: none; background-color: rgb(84, 59, 228); color: white; padding: 10px 20px; margin: 20px;">
+            </div>
+            
+            <hr>
+
+            <br><br>
+            <div id="Interests"></div>
+
+            
+        </div>
+        <script src="JS Files/interests.js"></script>
+    </body>
+</html>

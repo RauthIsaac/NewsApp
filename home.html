@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS Files/home.css">
+</head>
+<body>
+    <header>
+        <h1>Day News</h1>
+        <div class="user-data"></div>
+    </header>
+    <nav>
+        <ul>
+            <li countryCode ='Egypt'>Egypt</li>
+            <li countryCode ='Japan'>Japan</li>
+            <li countryCode ='France'>France</li>
+            <li countryCode ='Italy'>Italy</li>
+            <li countryCode ='Canada'>Canada</li>
+            <li countryCode ='America'>America</li>
+        </ul>
+    </nav>
+    <div class="search_bar">
+        <label for="DateFrom">Date From:</label>
+        <input type="date" id="DateFrom" name="DateFrom">
+       
+        <label for="search">Search:</label>
+        <input type="search" id="search" placeholder="Search for news...">
+        <button onclick="getNews(searchInput.value,dateFrom.value,dateTo.value)" type="submit" value="search">Search</button>
+    
+        <label for="DateTo">Date To:</label>
+        <input type="date" id="DateTo" name="DateTo">
+    </div>   
+    
+    <div class="container">
+        <div id="rowData" class="row">
+        </div>
+    </div>
+
+
+    <script src="JS Files/home.js" defer></script>
+</body>
+</html>
+

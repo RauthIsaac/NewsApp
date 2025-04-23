@@ -1,0 +1,233 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    background-color:rgb(233, 233, 218);
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    background-color: white;
+    width: 50%;
+    height: 500px;
+    translate: 50% 20%;
+    display:inline-block;
+    border-width: 4px;
+    border-style:groove;
+    border-width:thick;
+}
+
+
+.logIn{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    width: 50%;
+    margin-top: 70px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    background-color: white;
+}
+
+.userData{
+    background-color: rgb(205, 205, 200);
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 5px 20px;
+    width: 250px;
+    height: 40px;
+    display:flex;
+    line-height: 15px;
+}
+
+i{
+    font-size: 1.4rem;
+    color:rgb(145, 101, 69);
+    background-color: rgb(205, 205, 200);
+    margin-right: 20px;
+}
+
+input{
+    border: none;
+    background-color: rgb(205, 205, 200);
+    margin-bottom: 10px;
+}
+
+input:focus{
+    border: none;
+    background-color: rgb(205, 205, 200);
+
+}
+
+input[type="submit"]{
+    background-color: rgb(145, 101, 69);
+    border-radius: 15px;
+    color: white;
+    padding: 5px 20px;
+    width: 250px;
+    height: 40px;
+    margin-top: 30px;;
+}
+
+img{
+    float: right;
+    width: 50%;
+    height: 490px;
+} */
+
+
+/**********************************************************/
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 900px;
+    max-width: 90%;
+    margin: 20px;
+}
+
+/* Image Container */
+section > div:last-child {
+    flex: 1;
+    display: flex;
+}
+
+section > div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Container */
+.logIn {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logIn h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+/* Input Fields */
+.userData {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.userData i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.userData input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.userData input:focus {
+    outline: none;
+    border-color: #563d7c;
+    box-shadow: 0 0 0 3px rgba(86, 61, 124, 0.2);
+}
+
+/* Buttons */
+.signInBtn, 
+.signUpBtn, 
+.submitBtn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.signInBtn, 
+.submitBtn {
+    background-color: #2744d6;
+    color: white;
+}
+
+.signInBtn:hover, 
+.submitBtn:hover {
+    background-color: #131a7f;
+}
+
+.signUpBtn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.signUpBtn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+    }
+
+    section > div:last-child {
+        display: none;
+    }
+
+    .logIn {
+        padding: 30px;
+    }
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+/* Accessibility Focus Styles */
+input:focus-visible {
+    outline: 2px solid #563d7c;
+    outline-offset: 2px;
+}
