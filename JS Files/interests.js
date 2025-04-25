@@ -1,3 +1,5 @@
+
+localStorage.removeItem(interestsList);
 var interestsList = [];
 
 
@@ -5,7 +7,7 @@ function addInterest(){
     interestsList.innerHTML = "";
     var interest = document.getElementById("interest").value;
     if(!interest) return;
-    interestsList.push({interestname:interest, status: false});
+    interestsList.push(interest);
     console.log(interestsList);
     showList();
     document.querySelector("#interest").value = "";
@@ -18,10 +20,9 @@ function showList(){
     interestsDiv.innerHTML ="";
     var goToWebsiteBtn;
 
-    interestsList.forEach(function(ele,i){
+    interestsList.forEach(function(ele){
         var interestName = document.createElement("text");
-        interestName.innerText = ele.interestname;
-        interestName.setAttribute("id",i);
+        interestName.innerText = ele;
         interestName.style.padding = "15px";
 
         var div = document.createElement("div");
@@ -66,7 +67,7 @@ function showList(){
     
     interestsDiv.appendChild(goToWebsiteBtn);
 
-    localStorage.setItem("interestsList", JSON.stringify({interestsList}));
+    localStorage.setItem("interestsList", JSON.stringify(interestsList));
     console.log(interestsList);
 }
 
